@@ -1,0 +1,160 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/backgrounds/404-page-1.jpg");
+  }
+  
+  .text-section {
+      display: flex;
+  }
+
+  .container {
+      margin: 200px auto;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* backdrop-filter: blur(0.2px); */
+  }
+  
+  .container h1 {
+    font-size: 3rem;
+    font-weight: lighter;
+  }
+
+  .container h4 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .button-wrapper {
+    display: flex;
+    margin: 20px auto 0;
+    width: auto;
+    justify-content: space-evenly;
+  }
+
+
+  .home-button {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border-radius:42px;
+    border:1px solid #d83526;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:21px;
+	padding:15px 45px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+.home-button:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	background-color:#ce0100;
+}
+
+.home-button:active {
+	position:relative;
+	top:1px;
+}
+
+.back-button {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:42px;
+	border:1px solid #84bbf3;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:21px;
+	padding:15px 45px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.back-button:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.back-button:active {
+	position:relative;
+	top:1px;
+}
+
+         
+
+
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 75%;
+    }
+}
+
+
+  @media screen and (max-width: 700px) {
+      body {
+          background-image: url("../images/backgrounds/404-page-2.jpg");
+        }
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    .container h1 {
+        font-size: 2rem;
+      }
+    
+      .container h4 {
+        font-size: 1rem;
+      }
+
+      .home-button {
+        font-size:18px;
+        padding:17px 35px;
+      }
+    
+      .back-button {
+        font-size:18px;
+        padding:17px 35px;
+      }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 95%;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+      }
+    
+      .container h4 {
+        font-size: 1rem;
+      }
+
+      .home-button {
+        font-size:15px;
+        padding:17px 25px;
+      }
+    
+      .back-button {
+        font-size:15px;
+        padding:17px 25px;
+      }
+}

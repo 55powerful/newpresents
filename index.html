@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/301a0446e8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="styles/live-action.css" />
+    <title>Live Action</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div style="background-image: url(images/backgrounds/stars.jpg);" id=title>
+                <h1>Andrew Powers</h1>
+            </div>
+            <ul style="background-image: url(images/backgrounds/stars.jpg);" class="nav-links">
+                <li>
+                    <div class="navbar">
+                        <a id=home href="#">Home</a>
+                        <div class="dropdown">
+                            <a><button onclick="myFunction()" class="dropbtn">General
+                  <i class="fa fa-caret-down"></i>
+                </button></a>
+                            <div id="myDropdown" class="dropdown-content">
+                                <div id=row1 class="all-rows">
+                                    <div id=column1 class="all-columns">
+                                        <h3><i class="fas fa-film"></i> Entertainment</h3>
+                                        <a href="index.html">MultiMedia</a>
+                                        <a href="anime.html">Anime</a>
+                                    </div>
+                                    <div id=column1 class="all-columns">
+                                        <h3><i class="fas fa-couch"></i> Household</h3>
+                                        <a href="bedroom.html">Bedroom</a>
+                                        <a href="404-page.html">Kitchen</a>
+                                        <a href="404-page.html">Bathroom</a>
+                                    </div>
+                                    <div id=column1 class="all-columns">
+                                        <h3><i class="fas fa-music"></i> Music</h3>
+                                        <a href="404-page.html">Piano</a>
+                                        <a href="404-page.html">Guitar</a>
+                                        <a href="404-page.html">Ukelele</a>
+                                    </div>
+                                    <div id=column1 class="all-columns">
+                                        <h3><i class="fas fa-tshirt"></i> Apparel</h3>
+                                        <a href="404-page.html">shirts</a>
+                                        <a href="404-page.html">Pants</a>
+                                        <a href="404-page.html">Socks</a>
+                                    </div>
+                                    <div id=column1 class="all-columns">
+                                        <h3><i class="fas fa-gamepad"></i> Games</h3>
+                                        <a href="404-page.html">GameCube</a>
+                                        <a href="404-page.html">Wii-U</a>
+                                        <a href="404-page.html">Xbox</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a><button onclick="seasonalFunction()" class="dropbtn">Seasonal
+                  <i class="fa fa-caret-down"></i>
+                </button></a>
+                            <div id="myDropdown2" class="dropdown-content">
+                                <div id=row2 class="all-rows">
+                                    <div id=column2 class="all-columns">
+                                        <h3><i class="fas fa-frog"></i> Spring</h3>
+                                        <a href="404-page.html">Easter</a>
+                                        <a href="404-page.html">Anime</a>
+                                    </div>
+                                    <div id=column2 class="all-columns">
+                                        <h3><i class="far fa-sun"></i> Summer</h3>
+                                        <a href="404-page.html">Outdoors</a>
+                                        <a href="404-page.html">Beaches</a>
+                                    </div>
+                                    <div id=column2 class="all-columns">
+                                        <h3><i class="fab fa-canadian-maple-leaf"></i> Autumn</h3>
+                                        <a href="404-page.html">Halloween</a>
+                                        <a href="404-page.html">Minature Village</a>
+                                        <a href="404-page.html">Apparel</a>
+                                    </div>
+                                    <div id=column2 class="all-columns">
+                                        <h3><i class="far fa-snowflake"></i> Winter</h3>
+                                        <a href="404-page.html">Christmas</a>
+                                        <a href="404-page.html">Minature Village</a>
+                                        <a href="404-page.html">Apparel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id=carousel-wrapper>
+        <div id=spotlight class="header">
+            <h1>Spotlight</h1>
+        </div>
+        <div style="background-image: url(images/backgrounds/stars.jpg);" class="container-slides">
+            <div class="carousel-cell">
+                <img src="images/movies/expendables.jpg">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/pirates.jpg">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/zombieland.jpeg">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/maleficent2.jpeg">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/endgame.jpg">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/toy-story4.jpeg">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/inside-out.webp">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/believe.jpg">
+            </div>
+            <div class="carousel-cell">
+                <img src="images/movies/guardians1.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section id=movie-section>
+        <div id=header2 class="header">
+            <h1>Movies</h1>
+            <h3><span>Note:</span> <span id=blue>Blu-Ray</span> versions are preferred,<br>and digital codes never hurt!</h3>
+        </div>
+        <div style="background-image: url(images/backgrounds/stars.jpg);" class="movie-wrapper">
+            <img src="images/movies/expendables.jpg" alt="Expendables Movies 1,2,3-Combo Pack">
+            <img src="images/movies/pirates.jpg" alt="Pirates of the Caribean-5 Movie Combo Pack">
+            <img src="images/movies/zombieland.jpeg" alt="Zombieland-2 Movie Combo">
+            <img src="images/movies/endgame.jpg" alt="Avengers-Endgame-Marvel Movie">
+            <img src="images/movies/guardians1.jpg" alt="Guardians of the Galaxy-Marvel Movie">
+            <img src="images/movies/it.jpeg" alt="IT-Horror Movie">
+            <img src="images/movies/maleficent2.jpeg" alt="Maleficent 2-Mistress of Evil">
+            <img src="images/movies/bfg.jpg" alt="BFG">
+            <img src="images/movies/soul.jpg" alt="Soul-Disney Animated Movie">
+            <img src="images/movies/croods2.jpg" alt="The Croods-A New Age">
+            <img src="images/movies/drake-christmas.jpg" alt="Merry Christmas Drake & Josh">
+            <img src="images/movies/inside-out.webp" alt="Inside Out-Disney/Pixar Movie">
+            <img src="images/movies/tintin.jpg" alt="Tintin-Animated Movie">
+            <img src="images/movies/toy-story4.jpeg" alt="Toy Story 4-Disney/Pixar Movie">
+            <img src="images/movies/wall-e.jpg" alt="Wall-E-Disney/Pixar Movie">
+            <img src="images/movies/hercules.jpeg" alt="hercules-Disney Animated Movie">
+            <img src="images/movies/mulan.jpg" alt="Mulan-Disney/Pixar Movie">
+            <img src="images/movies/grinch.jpg" alt="The Grinch-Animated Film">
+            <img src="images/movies/believe.jpg" alt="I still Believe Movie">
+        </div>
+    </section>
+
+    <section id=show-section>
+        <div id="header3" class="header">
+            <h1>Shows</h1>
+            <h3><span>Note:</span> The covers identify the needed seasons.</h3>
+        </div>
+        <div style="background-image: url(images/backgrounds/stars.jpg);" class="show-wrapper">
+            <img src="images/shows/hawaii.jpg" alt="Hawaii Five-0 - Complete Series">
+        </div>
+    </section>
+
+    <footer class="footer-wrapper">
+        <a class="footer-link" href="https://www.linkedin.com/in/andrew-powers-3a189a195/"><i
+        class="fab fa-linkedin-in"></i></a>
+        <a class="footer-link" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a class="footer-link" href="https://github.com/"><i class="fab fa-github"></i></a>
+        <p class="copyright">Copyright © 2021 Andrew Powers. All rights reserved.</p>
+    </footer>
+
+
+
+    <!--! NOTE: The order below matters. The first source = Flickity Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--! Second source = Flickity Java Script -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script src="javascript/header.js"></script>
+    <script src="javascript/carousel.js"></script>
+
+</body>
+
+</html>
