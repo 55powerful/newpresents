@@ -1,0 +1,729 @@
+/*? Setting Variables - NOTE THEY NEED "--" to work*/
+
+:root {
+    --body-bg: #000024;
+    --nav-bg: transparent;
+    --nav-text: #f9f7f7;
+    --menu-options-text: #f9f7f7;
+    --menu-options-text-hover: #1761B0;
+    --column-bg: #1a1a2e;
+    --column-headers: #1761B0;
+    /*TODO: Insert Columns and column hover here. */
+    --spotlight-bg: #051427;
+    --spotlight-text: #f9f7f7;
+    --spotlight-carousel-bg: #602080;
+    --movie-title-bg: green;
+    --movie-text: #f9f7f7;
+    --movie-grid-bg: #054569;
+    --show-title-bg: #76101e;
+    --show-text: #f9f7f7;
+    --show-grid-bg: #9b0115;
+    --footer-bg: #880027;
+    --footer-text: ;
+    --footer-text-hover: ;
+    --footer-copyright-text: ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    /*Takes padding into account*/
+    background-color: var(--body-bg);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    display: flex;
+    /*Controls Heading height & color*/
+    height: 10vh;
+    /*Viewport height. 1vh = 1%*/
+    background: var(--nav-bg);
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    color: var(--nav-text);
+    font-size: 2.5rem;
+}
+
+.nav-links {
+    display: flex;
+    /*side by side*/
+    list-style: none;
+    /*removes bullet points*/
+    width: 100%;
+    /*Moves div to 50%*/
+    height: 100%;
+    /*Keeps Div usage at 100%*/
+    justify-content: space-around;
+    /*On menu items*/
+    align-items: center;
+    /*Centers within the div*/
+    margin-left: auto;
+    /*Moves to the far right*/
+}
+
+.nav-links li a {
+    color: var(--menu-options-text);
+    text-decoration: none;
+    /*Removes underline*/
+    font-size: 1.5rem;
+    /*Menu options*/
+}
+
+.navbar {
+    display: flex;
+    overflow: hidden;
+}
+
+.navbar a {
+    display: flex;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--menu-options-text-hover);
+}
+
+
+/*? Wishlist - btn specifies button */
+
+.nav-links li a .dropbtn {
+    border: none;
+    /*Removes border of button*/
+    outline: none;
+    /*Removes outline of button. Both of these are needed*/
+    color: inherit;
+    /*Needed to keep button color the same*/
+    background-color: inherit;
+    /*Needed to keep button background color*/
+    font: inherit;
+    /*Needed to keep button with same font*/
+}
+
+.nav-links li a .dropbtn i {
+    font-size: 17px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 1.3rem 0 0 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.all-rows {
+    display: flex;
+}
+
+.all-columns h3 {
+    color: var(--column-headers);
+    margin: 5px 0 10px 0;
+    font-size: 1.35rem;
+}
+
+.all-columns a {
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.all-columns a:hover {
+    background-color: #ddd;
+}
+
+
+/* Create three equal columns that floats next to each other */
+
+#column1 {
+    box-sizing: border-box;
+    /*33.33 includes padding and margin*/
+    width: 20%;
+    padding: 10px;
+    background-color: var(--column-bg);
+    background-image: url("/images/backgrounds/stars.jpg");
+}
+
+#column2 {
+    box-sizing: border-box;
+    /*33.33 includes padding and margin*/
+    width: 25%;
+    padding: 10px;
+    background-color: var(--column-bg);
+    background-image: url("/images/backgrounds/stars.jpg");
+}
+
+
+/*? Carousel Wrapper Styles & Formats */
+
+.header {
+    text-align: center;
+    margin: 0 auto;
+    width: 0 auto;
+}
+
+#spotlight h1 {
+    background-color: var(--spotlight-bg);
+    /* I put two in the middle to keep it dark over text */
+    background-image: linear-gradient(to right, #210535, #350b40, #7b337d);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: var(--spotlight-text);
+    font-size: 2.3rem;
+    padding: 1.5rem;
+}
+
+#carousel-wrapper img {
+    max-width: 100%;
+    /*Width of each movie. Will also affect height*/
+    height: auto;
+    /*Set to match the width. */
+}
+
+.container-slides {
+    background-color: var(--spotlight-carousel-bg);
+    padding: 1rem 0;
+    /*Adds padding to entire carousel*/
+}
+
+.carousel-cell {
+    /*! width = space between imgs. padding = padding around each individual img*/
+    width: 20%;
+    /*Space of each movie.*/
+    padding: 0 1rem;
+    /*space */
+    display: flex;
+    /*Side by side*/
+    min-height: 100%;
+    /*Stretches to the bottom of the space*/
+}
+
+
+/*? End of Carousel Wrapper Styles & Formats */
+
+
+/*? Movie Section Styles & Formats */
+
+#movie-section {
+    background-color: var(--movie-title-bg);
+    /* background-image: linear-gradient(to right, #00481a, #107e57, #107e57, #a1ce3f); */
+    background-image: linear-gradient(to right, #210535, #001736, #001736, #107e57);
+}
+
+#header2 {
+    padding: 0.6rem;
+    /*This keeps margin to the top but adds space*/
+}
+
+#header2 h1 {
+    padding: 0.6rem;
+    /*This keeps margin to the top but adds space*/
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: var(--movie-text);
+    font-size: 2.3rem;
+}
+
+#header2 h3 {
+    font-weight: normal;
+    color: var(--movie-text);
+}
+
+#header2 h3 span {
+    font-weight: 600;
+    color: rgb(255, 0, 0);
+}
+
+#header2 #blue {
+    color: rgb(45, 84, 255);
+}
+
+
+/*
+? Auto-fit lets CSS choose how many pictures to choose. Also responsive.
+? Repeat = how many columns?, which means autofit will pick the number available
+? Instead of setting px, we can use minmax(), which allows us to determine minumum
+? value of picture. So as soon as it doesn't have enough space for minimum is will
+? jump down. And, as soon as it has enough space (with 1fr), it will add another
+?to the row.? This is what makes it responsive. If there is a pixal amount in the
+? maximum, there wasn't enough entries. And I didn't want to make the pic huge.
+? Often it will be a pic or two. Otherwise it should be 1fr as max.
+? Increasing or decreasing minimum affects how many movies are in a row at once
+? because it affects the size of the movie.
+*/
+
+.movie-wrapper {
+    display: grid;
+    grid-template-columns: repeat(Auto-fit, minmax(350px, 1fr));
+    padding: 10px 5px;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: var(--movie-grid-bg);
+}
+
+.movie-wrapper img {
+    width: 100%;
+    /*? Image takes up 100% of width*/
+    height: 100%;
+}
+
+
+/*? End of Movie Section Styles & Formats */
+
+
+/*? Show Section Styles & Formats */
+
+#show-section {
+    background-color: var(--show-title-bg);
+    background-image: linear-gradient(to right, #ac4b1c, #76101e, #76101e, #530f1e);
+}
+
+#header3 {
+    padding: 0.6rem;
+    /*This keeps margin to the top but adds space*/
+}
+
+#header3 h1 {
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: var(--show-text);
+    font-size: 2.3rem;
+    margin: 0 0;
+}
+
+#header3 h3 {
+    font-weight: 500;
+    color: var(--show-text);
+}
+
+#header3 h3 span {
+    font-weight: 600;
+    color: rgb(255, 0, 0);
+}
+
+.show-wrapper {
+    display: grid;
+    grid-template-columns: repeat(Auto-fit, minmax(300px, 375px));
+    padding: 10px 5px;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: var(--show-grid-bg);
+}
+
+.show-wrapper img {
+    width: 100%;
+    /*? Image takes up 100% of width*/
+    height: 100%;
+}
+
+
+/*? End of Show Section Styles & Formats */
+
+
+/*? Footer Styles & Formats*/
+
+.footer-wrapper {
+    background-color: var(--footer-bg);
+    background-image: linear-gradient(to right, #9e002d, #880027, #880027, #45046a);
+    padding: 2.5rem 0 0.01rem;
+    text-align: center;
+}
+
+.footer-wrapper a {
+    color: #ff4b4b;
+    font-size: 1.4rem;
+    margin: 10px 20px;
+    /*? Adds more space to top and sides from other links*/
+    text-decoration: none;
+}
+
+.footer-wrapper a:hover {
+    color: #d40000;
+}
+
+.copyright {
+    width: 0 auto;
+    margin: 2rem auto;
+    /*Margin moves box off other links, keeps to center*/
+    /* padding: 0 0; */
+    color: #ff0000;
+    font-size: 1rem;
+}
+
+
+/*? End of Footer Styles & Formats*/
+
+
+/*? Media Styles - MINIMUM WIDTH*/
+
+@media screen and (min-width: 1200px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+
+/*? End of Media Styles - MINIMUM WIDTH*/
+
+
+/*? Media Styles - MAXIMUM WIDTH*/
+
+@media (max-width: 2000px) {
+    .carousel-cell {
+        width: 13%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body.freeze {
+        overflow: hidden;
+    }
+    header {
+        position: relative;
+        z-index: 5;
+    }
+    #title {
+        width: 100%;
+    }
+    /*? The clip path creates a circle. The 100px is the size*/
+    /*? of the circle. The 90% moves the circle to the right.*/
+    /*? Next, the -10% moves it to the top, just off frame. This*/
+    /*? puts it in a similar position as the menu. By changing the*/
+    /*? pixal size, it will change how much screen it takes up.*/
+    /*? But make changes on the nav-links.open part below this.*/
+    .nav-links {
+        position: fixed;
+        /*Same place even if scrolled*/
+        background: #eeeeee;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        /*Changes view to columns*/
+        clip-path: circle(25px at 105% -5%);
+        -webkit-clip-path: circle(25px at 105% -5%);
+        transition: all 2s ease-out;
+        /*Creates flow out instead of shooting*/
+        pointer-events: none;
+        /*Safety for existing clicks on the page.*/
+        /*While this is open, it cancels clicking on homepage elements.*/
+        overflow-y: scroll;
+        z-index: -1;
+    }
+    /*? . open is when the user clicks on the menu. Without this it won't open*/
+    /*? the menu at all. Notice the 1000px now, instead of 100px.*/
+    /*! The open is referred to in JavaScript. We're creating this class now.*/
+    .nav-links.open {
+        clip-path: circle(1500px at 90% -10%);
+        -webkit-clip-path: circle(1500px at 90% -10%);
+        pointer-events: all;
+        /*Opens clicking function back up. So, this means*/
+        /*individuals would't be able to click homepage elements while menu open*/
+    }
+    /*? Controlling the menu titles after open hamburger.*/
+    .nav-links li {
+        opacity: 0;
+        /*Makes menu items disappear*/
+    }
+    .nav-links li a {
+        font-size: 25px;
+        /*Controls sizing of all options*/
+    }
+    /*? This selects the first link in the entire list*/
+    /*! select all text, 0.5, ease in, set delay time */
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    /*? This selects the second link in the entire list*/
+    /*! Notice the delay time is 0.4 seconds because we use a flow for circle */
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+    /*? This selects the third link in the entire list*/
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+    /*! Another Class using for Java Script.*/
+    li.fade {
+        opacity: 1;
+    }
+    .navbar {
+        flex-direction: column;
+        display: inline;
+    }
+    .fa {
+        position: relative;
+        z-index: -1
+    }
+    .dropdown-content {
+        padding: 0 0 0 0;
+    }
+    .all-rows {
+        flex-direction: column;
+    }
+    /** Note: These columns need to be seperated. We can't use .all-columns.*/
+    #column1 {
+        width: 100%;
+        height: auto;
+    }
+    #column2 {
+        width: 100%;
+        height: auto;
+    }
+    /*? The parent element (nav) has a relative position.*/
+    /*? This will remain with the natural flow of the page*/
+    /*? It won't stay in the spot even if we scroll up or down*/
+    /*? The relative will also be an achor point for an*/
+    /*? absolutely positioned child later (hamburger) */
+    /*? Absolute position puts the hamburger menu on the page*/
+    /*? relative to the parent (which is the nav).*/
+    /*? This means formatting will be based off of parent*/
+    /*? not the entire webpage.*/
+    /*! Translate (0,0) starts in the middle on x,y axis*/
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        /*Changes cursor*/
+        right: 5%;
+        /*Moves menu further left as it gets higher*/
+        top: 50%;
+        /*Puts menu 50% way down from nav, which is why it's not in the middle of page*/
+        transform: translate(-5%, -50%);
+        /*X and Y Coordinates*/
+        /*Moves slightly up and left*/
+        /*z-index: 2;*/
+        /*This would be needed if the header wasn't staying*/
+        /*! Z-index = layering on top of each other*/
+        /*? By changing to two, it won't be covered up by*/
+        /*? other elements. The # depends on the # of elements. */
+    }
+    .line {
+        width: 30px;
+        /*How far the lines stretch*/
+        height: 3px;
+        /*height of each line*/
+        background: #fa1e0e;
+        /*Color of each line*/
+        margin: 5px;
+        /*The room given to fit lines in div*/
+    }
+    .carousel-cell {
+        width: 25%;
+    }
+    .show {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    #title h1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+    }
+    .nav-links li a {
+        font-size: 20px;
+        /*Controls sizing of all options*/
+    }
+    .line {
+        /*Controls lines on hamburger*/
+        width: 25px;
+        /*How far the lines stretch*/
+        height: 2px;
+        /*height of each line*/
+        background: red;
+        /*Color of each line*/
+        margin: 5px;
+        /*The room given to fit lines in div*/
+    }
+    #spotlight h1 {
+        font-weight: normal;
+        font-size: 1.9rem;
+    }
+    .carousel-cell {
+        width: 30%;
+    }
+    .flickity-prev-next-button {
+        width: 30px;
+        height: 30px;
+    }
+    .flickity-page-dots .dot {
+        margin: 0 0.3rem 0.2rem;
+        width: 7px;
+        height: 7px;
+    }
+    #header2 h1 {
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        font-size: 1.9rem;
+    }
+    #header2 h3 {
+        font-size: 1rem;
+    }
+    .movie-wrapper {
+        grid-template-columns: repeat(Auto-fit, minmax(150px, 1fr));
+    }
+    #header3 h1 {
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        font-size: 1.9rem;
+    }
+    #header3 h3 {
+        font-size: 1rem;
+    }
+    .show-wrapper {
+        grid-template-columns: repeat(Auto-fit, minmax(150px, 175px));
+    }
+    .footer-wrapper a {
+        font-size: 0.9rem;
+    }
+    .copyright {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #title h1 {
+        font-size: 1.3rem;
+    }
+    .nav-links.open {
+        clip-path: circle(1250px at 93% -10%);
+        -webkit-clip-path: circle(1250px at 93% -10%);
+    }
+    .nav-links li a {
+        font-size: 15px;
+        /*Controls sizing of all options*/
+    }
+    .line {
+        /*Controls lines on hamburger*/
+        width: 20px;
+        /*How far the lines stretch*/
+        height: 1px;
+        /*height of each line*/
+        background: red;
+        /*Color of each line*/
+        margin: 4px;
+        /*The room given to fit lines in div*/
+    }
+    #spotlight h1 {
+        font-size: 1.2rem;
+    }
+    .carousel-cell {
+        width: 40%;
+    }
+    .flickity-prev-next-button {
+        width: 25px;
+        height: 25px;
+    }
+    .flickity-page-dots .dot {
+        margin: 0 0.2rem 0.4rem;
+        width: 5px;
+        height: 5px;
+    }
+    #header2 h1 {
+        font-size: 1.2rem;
+    }
+    #header2 h3 {
+        font-size: 0.8rem;
+    }
+    .movie-wrapper {
+        grid-template-columns: repeat(Auto-fit, minmax(110px, 1fr));
+    }
+    #header3 h1 {
+        font-size: 1.2rem;
+    }
+    #header3 h3 {
+        font-size: 0.8rem;
+    }
+    .show-wrapper {
+        grid-template-columns: repeat(Auto-fit, minmax(100px, 125px));
+    }
+    .footer-wrapper a {
+        font-size: 0.65rem;
+    }
+    .copyright {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #title h1 {
+        font-size: 1rem;
+    }
+    .nav-links.open {
+        clip-path: circle(1000px at 93% -10%);
+        -webkit-clip-path: circle(1000px at 93% -10%);
+    }
+    .nav-links li a {
+        font-size: 12px;
+        /*Controls sizing of all options*/
+    }
+    .line {
+        /*Controls lines on hamburger*/
+        width: 15px;
+        /*How far the lines stretch*/
+        height: 1px;
+        /*height of each line*/
+        background: red;
+        /*Color of each line*/
+        margin: 3px;
+        /*The room given to fit lines in div*/
+    }
+    #spotlight h1 {
+        font-size: 0.9rem;
+    }
+    .carousel-cell {
+        width: 55%;
+    }
+    .flickity-prev-next-button {
+        width: 20px;
+        height: 20px;
+    }
+    .flickity-page-dots .dot {
+        margin: 0 0.15rem 0.6rem;
+        width: 3px;
+        height: 3px;
+    }
+    #header2 h1 {
+        font-size: 0.9rem;
+    }
+    #header2 h3 {
+        font-size: 0.65rem;
+    }
+    .movie-wrapper {
+        grid-template-columns: repeat(Auto-fit, minmax(100px, 1fr));
+    }
+    #header3 h1 {
+        font-size: 0.9rem;
+    }
+    #header3 h3 {
+        font-size: 0.65rem;
+    }
+    .show-wrapper {
+        grid-template-columns: repeat(Auto-fit, minmax(75px, 100px));
+    }
+    .footer-wrapper a {
+        font-size: 0.55rem;
+    }
+    .copyright {
+        font-size: 0.4rem;
+    }
+}
+
+
+/*? End of Media Styles - MAXIMUM WIDTH*/
